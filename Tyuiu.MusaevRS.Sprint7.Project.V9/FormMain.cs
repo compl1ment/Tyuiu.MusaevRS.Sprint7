@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 {
     public partial class FormMain : Form
@@ -19,7 +20,8 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-
+            FormOpen formOpen = new FormOpen();
+            
         }
 
         private void textBoxSort_TextChanged(object sender, EventArgs e)
