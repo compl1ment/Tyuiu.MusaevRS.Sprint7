@@ -30,11 +30,6 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         private void InitializeComponent()
         {
             this.groupBoxMain = new System.Windows.Forms.GroupBox();
-            this.buttonOpenFile = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonSort = new System.Windows.Forms.Button();
-            this.ButtonFilter = new System.Windows.Forms.Button();
             this.textBoxSave = new System.Windows.Forms.TextBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.textBoxSort = new System.Windows.Forms.TextBox();
@@ -46,6 +41,11 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelMain = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBoxMain = new System.Windows.Forms.ToolStripComboBox();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonSort = new System.Windows.Forms.Button();
+            this.ButtonFilter = new System.Windows.Forms.Button();
             this.groupBoxMain.SuspendLayout();
             this.groupBoxDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
@@ -71,66 +71,6 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.groupBoxMain.Size = new System.Drawing.Size(196, 406);
             this.groupBoxMain.TabIndex = 0;
             this.groupBoxMain.TabStop = false;
-            // 
-            // buttonOpenFile
-            // 
-            this.buttonOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOpenFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonOpenFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_add;
-            this.buttonOpenFile.Location = new System.Drawing.Point(29, 35);
-            this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(129, 50);
-            this.buttonOpenFile.TabIndex = 3;
-            this.buttonOpenFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSave.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_save;
-            this.buttonSave.Location = new System.Drawing.Point(100, 245);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(86, 50);
-            this.buttonSave.TabIndex = 2;
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSearch.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.zoom;
-            this.buttonSearch.Location = new System.Drawing.Point(6, 245);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(80, 50);
-            this.buttonSearch.TabIndex = 2;
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonSort
-            // 
-            this.buttonSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSort.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSort.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_sort;
-            this.buttonSort.Location = new System.Drawing.Point(106, 163);
-            this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(80, 47);
-            this.buttonSort.TabIndex = 2;
-            this.buttonSort.UseVisualStyleBackColor = true;
-            this.buttonSort.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ButtonFilter
-            // 
-            this.ButtonFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonFilter.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ButtonFilter.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_edit;
-            this.ButtonFilter.Location = new System.Drawing.Point(6, 163);
-            this.ButtonFilter.Name = "ButtonFilter";
-            this.ButtonFilter.Size = new System.Drawing.Size(80, 50);
-            this.ButtonFilter.TabIndex = 2;
-            this.ButtonFilter.UseVisualStyleBackColor = true;
-            this.ButtonFilter.Click += new System.EventHandler(this.ButtonFilter_Click);
             // 
             // textBoxSave
             // 
@@ -250,6 +190,66 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.toolStripComboBoxMain.Size = new System.Drawing.Size(121, 25);
             this.toolStripComboBoxMain.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxMain_SelectedIndexChanged);
             // 
+            // buttonOpenFile
+            // 
+            this.buttonOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonOpenFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_add;
+            this.buttonOpenFile.Location = new System.Drawing.Point(29, 35);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(129, 50);
+            this.buttonOpenFile.TabIndex = 3;
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSave.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSave.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_save;
+            this.buttonSave.Location = new System.Drawing.Point(100, 245);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(86, 50);
+            this.buttonSave.TabIndex = 2;
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSearch.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.zoom;
+            this.buttonSearch.Location = new System.Drawing.Point(6, 245);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(80, 50);
+            this.buttonSearch.TabIndex = 2;
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonSort
+            // 
+            this.buttonSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSort.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSort.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_sort;
+            this.buttonSort.Location = new System.Drawing.Point(106, 163);
+            this.buttonSort.Name = "buttonSort";
+            this.buttonSort.Size = new System.Drawing.Size(80, 47);
+            this.buttonSort.TabIndex = 2;
+            this.buttonSort.UseVisualStyleBackColor = true;
+            this.buttonSort.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ButtonFilter
+            // 
+            this.ButtonFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFilter.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonFilter.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_edit;
+            this.ButtonFilter.Location = new System.Drawing.Point(6, 163);
+            this.ButtonFilter.Name = "ButtonFilter";
+            this.ButtonFilter.Size = new System.Drawing.Size(80, 50);
+            this.ButtonFilter.TabIndex = 2;
+            this.ButtonFilter.UseVisualStyleBackColor = true;
+            this.ButtonFilter.Click += new System.EventHandler(this.ButtonFilter_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +289,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         private System.Windows.Forms.Button buttonOpenFile;
         private System.Windows.Forms.OpenFileDialog openFileDialogTask;
         private System.Windows.Forms.GroupBox groupBoxDataGrid;
-        private System.Windows.Forms.DataGridView dataGridViewMain;
+        public System.Windows.Forms.DataGridView dataGridViewMain;
         private System.Windows.Forms.ToolStrip toolStripMain;
         private System.Windows.Forms.ToolStripLabel toolStripLabelMain;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxMain;

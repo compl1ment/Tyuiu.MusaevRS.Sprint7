@@ -50,6 +50,10 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         private void ButtonFilter_Click(object sender, EventArgs e)
         {
+            FormEditTable formEditTable = new FormEditTable();
+            formEditTable.Show();
+            DataTable table = tableCollection[Convert.ToString(toolStripComboBoxMain.SelectedItem)];
+            formEditTable.dataGridViewEdit.DataSource = table;
             
         }
 
@@ -58,15 +62,17 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             try
             {
 
-                ButtonFilter.Enabled = true;
-                buttonSave.Enabled = true;
-                buttonSearch.Enabled = true;
-                buttonSort.Enabled = true;
+                
                 DialogResult res = openFileDialogTask.ShowDialog();
                 if (res == DialogResult.OK)
                 {
                     groupBoxDataGrid.Location = new Point(231, 31);
                     groupBoxMain.Location = new Point(12, 31);
+
+                    ButtonFilter.Enabled = true;
+                    buttonSave.Enabled = true;
+                    buttonSearch.Enabled = true;
+                    buttonSort.Enabled = true;
 
                     fileName = openFileDialogTask.FileName;
 
@@ -118,6 +124,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             DataTable table = tableCollection[Convert.ToString(toolStripComboBoxMain.SelectedItem)];
 
             dataGridViewMain.DataSource = table;
+
         }
     }
 }
