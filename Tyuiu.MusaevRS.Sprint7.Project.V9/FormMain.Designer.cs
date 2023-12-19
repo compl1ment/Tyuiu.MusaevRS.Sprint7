@@ -30,6 +30,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         private void InitializeComponent()
         {
             this.groupBoxMain = new System.Windows.Forms.GroupBox();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonSort = new System.Windows.Forms.Button();
@@ -39,11 +40,16 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.textBoxSort = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxFile = new System.Windows.Forms.TextBox();
-            this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.buttonOpenFile = new System.Windows.Forms.Button();
             this.openFileDialogTask = new System.Windows.Forms.OpenFileDialog();
+            this.groupBoxDataGrid = new System.Windows.Forms.GroupBox();
+            this.dataGridViewMain = new System.Windows.Forms.DataGridView();
+            this.toolStripMain = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelMain = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBoxMain = new System.Windows.Forms.ToolStripComboBox();
             this.groupBoxMain.SuspendLayout();
+            this.groupBoxDataGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
+            this.toolStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxMain
@@ -60,11 +66,23 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.groupBoxMain.Controls.Add(this.textBoxFile);
             this.groupBoxMain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBoxMain.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxMain.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxMain.Location = new System.Drawing.Point(12, 28);
             this.groupBoxMain.Name = "groupBoxMain";
-            this.groupBoxMain.Size = new System.Drawing.Size(196, 326);
+            this.groupBoxMain.Size = new System.Drawing.Size(196, 406);
             this.groupBoxMain.TabIndex = 0;
             this.groupBoxMain.TabStop = false;
+            // 
+            // buttonOpenFile
+            // 
+            this.buttonOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonOpenFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_add;
+            this.buttonOpenFile.Location = new System.Drawing.Point(29, 35);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(129, 50);
+            this.buttonOpenFile.TabIndex = 3;
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
             // buttonSave
             // 
@@ -185,34 +203,52 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.textBoxFile.TabIndex = 0;
             this.textBoxFile.Text = "Редактировать файл";
             // 
-            // dataGridViewMain
-            // 
-            this.dataGridViewMain.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridViewMain.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMain.ColumnHeadersVisible = false;
-            this.dataGridViewMain.Location = new System.Drawing.Point(225, 12);
-            this.dataGridViewMain.Name = "dataGridViewMain";
-            this.dataGridViewMain.RowHeadersVisible = false;
-            this.dataGridViewMain.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridViewMain.Size = new System.Drawing.Size(546, 425);
-            this.dataGridViewMain.TabIndex = 1;
-            // 
-            // buttonOpenFile
-            // 
-            this.buttonOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOpenFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonOpenFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_add;
-            this.buttonOpenFile.Location = new System.Drawing.Point(29, 35);
-            this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(129, 50);
-            this.buttonOpenFile.TabIndex = 3;
-            this.buttonOpenFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
-            // 
             // openFileDialogTask
             // 
             this.openFileDialogTask.FileName = "openFileDialogTask";
+            // 
+            // groupBoxDataGrid
+            // 
+            this.groupBoxDataGrid.Controls.Add(this.dataGridViewMain);
+            this.groupBoxDataGrid.Location = new System.Drawing.Point(231, 28);
+            this.groupBoxDataGrid.Name = "groupBoxDataGrid";
+            this.groupBoxDataGrid.Size = new System.Drawing.Size(552, 409);
+            this.groupBoxDataGrid.TabIndex = 1;
+            this.groupBoxDataGrid.TabStop = false;
+            // 
+            // dataGridViewMain
+            // 
+            this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewMain.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewMain.Name = "dataGridViewMain";
+            this.dataGridViewMain.ReadOnly = true;
+            this.dataGridViewMain.Size = new System.Drawing.Size(546, 390);
+            this.dataGridViewMain.TabIndex = 0;
+            // 
+            // toolStripMain
+            // 
+            this.toolStripMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelMain,
+            this.toolStripComboBoxMain});
+            this.toolStripMain.Location = new System.Drawing.Point(0, 0);
+            this.toolStripMain.Name = "toolStripMain";
+            this.toolStripMain.Size = new System.Drawing.Size(795, 25);
+            this.toolStripMain.TabIndex = 3;
+            this.toolStripMain.Text = "toolStripMain";
+            // 
+            // toolStripLabelMain
+            // 
+            this.toolStripLabelMain.Name = "toolStripLabelMain";
+            this.toolStripLabelMain.Size = new System.Drawing.Size(36, 22);
+            this.toolStripLabelMain.Text = "Лист:";
+            // 
+            // toolStripComboBoxMain
+            // 
+            this.toolStripComboBoxMain.Name = "toolStripComboBoxMain";
+            this.toolStripComboBoxMain.Size = new System.Drawing.Size(121, 25);
+            this.toolStripComboBoxMain.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxMain_SelectedIndexChanged);
             // 
             // FormMain
             // 
@@ -220,7 +256,8 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(795, 449);
-            this.Controls.Add(this.dataGridViewMain);
+            this.Controls.Add(this.toolStripMain);
+            this.Controls.Add(this.groupBoxDataGrid);
             this.Controls.Add(this.groupBoxMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormMain";
@@ -228,8 +265,12 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBoxMain.ResumeLayout(false);
             this.groupBoxMain.PerformLayout();
+            this.groupBoxDataGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
+            this.toolStripMain.ResumeLayout(false);
+            this.toolStripMain.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,7 +279,6 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         private System.Windows.Forms.GroupBox groupBoxMain;
         private System.Windows.Forms.Button ButtonFilter;
         private System.Windows.Forms.TextBox textBoxFile;
-        private System.Windows.Forms.DataGridView dataGridViewMain;
         private System.Windows.Forms.TextBox textBoxSort;
         private System.Windows.Forms.Button buttonSort;
         private System.Windows.Forms.Button buttonSearch;
@@ -248,6 +288,11 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonOpenFile;
         private System.Windows.Forms.OpenFileDialog openFileDialogTask;
+        private System.Windows.Forms.GroupBox groupBoxDataGrid;
+        private System.Windows.Forms.DataGridView dataGridViewMain;
+        private System.Windows.Forms.ToolStrip toolStripMain;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelMain;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxMain;
     }
 }
 

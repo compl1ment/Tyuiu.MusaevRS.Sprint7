@@ -8,5 +8,9 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9.Lib
 {
     public class DataService
     {
+        public string CollectTextFromFile(string path)
+        {
+
+        }
     }
 }
