@@ -66,22 +66,52 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
                 DialogResult res = openFileDialogTask.ShowDialog();
                 if (res == DialogResult.OK)
                 {
-                    groupBoxDataGrid.Location = new Point(231, 31);
-                    groupBoxMain.Location = new Point(12, 31);
-
-                    ButtonFilter.Enabled = true;
-                    buttonSave.Enabled = true;
-                    buttonSearch.Enabled = true;
-                    buttonSort.Enabled = true;
+                    
 
                     fileName = openFileDialogTask.FileName;
 
-                    Text = fileName;
+                    
 
-                    OpenExcelFile(fileName);
+                    // Путь к файлу CSV
+                    string csvFilePath = fileName;
 
-                    toolStripMain.Visible = true;
+                    // Создаем DataTable для хранения данных из CSV
+                    DataTable dataTable = new DataTable();
+
+                    // Читаем содержимое файла CSV
+                    using (StreamReader reader = new StreamReader(csvFilePath))
+                    {
+                        // Читаем первую строку, чтобы получить заголовки столбцов
+                        string headerLine = reader.ReadLine();
+                        string[] headers = headerLine.Split(',');
+
+                        // Создаем столбцы DataTable на основе заголовков
+                        foreach (string header in headers)
+                        {
+                            dataTable.Columns.Add(header);
+                        }
+
+                        // Читаем остальные строки и добавляем их в DataTable
+                        while (!reader.EndOfStream)
+                        {
+                            string dataLine = reader.ReadLine();
+                            string[] data = dataLine.Split(',');
+
+                            // Добавляем строку данных в DataTable
+                            dataTable.Rows.Add(data);
+                        }
+                    }
+
+                    
+
+                    
+                    
+                    dataGridViewMain.Dock = DockStyle.Fill;
+                    dataGridViewMain.DataSource = dataTable;
+
+                    
                 }
+            
                 else
                 {
                     throw new Exception("Файл не выбран!");
@@ -94,36 +124,18 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
             
         }
-        private void  OpenExcelFile(string path)
-        {
-            FileStream stream = File.Open(path, FileMode.Open, FileAccess.Read);
-
-            IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream);
-
-            DataSet db = reader.AsDataSet(new ExcelDataSetConfiguration()
-            {
-                ConfigureDataTable = (x) => new ExcelDataTableConfiguration()
-                {
-                    UseHeaderRow = true
-                }
-            });
-            tableCollection = db.Tables;
-
-            toolStripComboBoxMain.Items.Clear();
-
-            foreach (DataTable table in tableCollection)
-            {
-                toolStripComboBoxMain.Items.Add(table.TableName);
-            }
-            toolStripComboBoxMain.SelectedIndex = 0;
-
-        }
+        
 
         private void toolStripComboBoxMain_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable table = tableCollection[Convert.ToString(toolStripComboBoxMain.SelectedItem)];
 
             dataGridViewMain.DataSource = table;
+
+        }
+
+        private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

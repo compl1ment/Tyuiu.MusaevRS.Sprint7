@@ -50,9 +50,11 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             // dataGridViewEdit
             // 
             this.dataGridViewEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEdit.ColumnHeadersVisible = false;
             this.dataGridViewEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewEdit.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewEdit.Name = "dataGridViewEdit";
+            this.dataGridViewEdit.RowHeadersVisible = false;
             this.dataGridViewEdit.Size = new System.Drawing.Size(770, 391);
             this.dataGridViewEdit.TabIndex = 0;
             // 
@@ -97,9 +99,9 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxMain;
+        public System.Windows.Forms.GroupBox groupBoxMain;
         public System.Windows.Forms.DataGridView dataGridViewEdit;
-        private System.Windows.Forms.GroupBox groupBoxButton;
-        private System.Windows.Forms.Button buttonSaveFile;
+        public System.Windows.Forms.GroupBox groupBoxButton;
+        public System.Windows.Forms.Button buttonSaveFile;
     }
 }
