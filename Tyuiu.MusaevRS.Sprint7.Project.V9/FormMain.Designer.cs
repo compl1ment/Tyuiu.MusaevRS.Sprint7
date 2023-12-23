@@ -29,273 +29,158 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBoxMain = new System.Windows.Forms.GroupBox();
+            this.components = new System.ComponentModel.Container();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.buttonOpenFile = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonSort = new System.Windows.Forms.Button();
-            this.ButtonFilter = new System.Windows.Forms.Button();
-            this.textBoxSave = new System.Windows.Forms.TextBox();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.textBoxSort = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBoxFile = new System.Windows.Forms.TextBox();
-            this.openFileDialogTask = new System.Windows.Forms.OpenFileDialog();
-            this.groupBoxDataGrid = new System.Windows.Forms.GroupBox();
+            this.buttonSaveFile = new System.Windows.Forms.Button();
+            this.panelDataGridView = new System.Windows.Forms.Panel();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.toolStripMain = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabelMain = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBoxMain = new System.Windows.Forms.ToolStripComboBox();
-            this.groupBoxMain.SuspendLayout();
-            this.groupBoxDataGrid.SuspendLayout();
+            this.toolTipOpenFile = new System.Windows.Forms.ToolTip(this.components);
+            this.panelNoMain = new System.Windows.Forms.Panel();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.toolTipHelp = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipSaveFile = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipEdit = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonEditFile = new System.Windows.Forms.Button();
+            this.saveFileDialogOpen = new System.Windows.Forms.SaveFileDialog();
+            this.panelMain.SuspendLayout();
+            this.panelDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
-            this.toolStripMain.SuspendLayout();
+            this.panelNoMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBoxMain
+            // panelMain
             // 
-            this.groupBoxMain.Controls.Add(this.buttonOpenFile);
-            this.groupBoxMain.Controls.Add(this.buttonSave);
-            this.groupBoxMain.Controls.Add(this.buttonSearch);
-            this.groupBoxMain.Controls.Add(this.buttonSort);
-            this.groupBoxMain.Controls.Add(this.ButtonFilter);
-            this.groupBoxMain.Controls.Add(this.textBoxSave);
-            this.groupBoxMain.Controls.Add(this.textBoxSearch);
-            this.groupBoxMain.Controls.Add(this.textBoxSort);
-            this.groupBoxMain.Controls.Add(this.textBox1);
-            this.groupBoxMain.Controls.Add(this.textBoxFile);
-            this.groupBoxMain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBoxMain.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxMain.Location = new System.Drawing.Point(12, 28);
-            this.groupBoxMain.Name = "groupBoxMain";
-            this.groupBoxMain.Size = new System.Drawing.Size(196, 406);
-            this.groupBoxMain.TabIndex = 0;
-            this.groupBoxMain.TabStop = false;
+            this.panelMain.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelMain.Controls.Add(this.buttonEditFile);
+            this.panelMain.Controls.Add(this.buttonOpenFile);
+            this.panelMain.Location = new System.Drawing.Point(12, 69);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(806, 101);
+            this.panelMain.TabIndex = 0;
             // 
             // buttonOpenFile
             // 
+            this.buttonOpenFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenFile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonOpenFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_add;
-            this.buttonOpenFile.Location = new System.Drawing.Point(29, 35);
+            this.buttonOpenFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.application_form_add;
+            this.buttonOpenFile.Location = new System.Drawing.Point(31, 15);
             this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(129, 50);
-            this.buttonOpenFile.TabIndex = 3;
-            this.buttonOpenFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            this.buttonOpenFile.Size = new System.Drawing.Size(106, 60);
+            this.buttonOpenFile.TabIndex = 0;
+            this.toolTipOpenFile.SetToolTip(this.buttonOpenFile, "Открыть файл расширения .csv");
+            this.buttonOpenFile.UseVisualStyleBackColor = false;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click_1);
             // 
-            // buttonSave
+            // buttonSaveFile
             // 
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSave.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_save;
-            this.buttonSave.Location = new System.Drawing.Point(100, 245);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(86, 50);
-            this.buttonSave.TabIndex = 2;
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSaveFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSaveFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSaveFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSaveFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.application_put;
+            this.buttonSaveFile.Location = new System.Drawing.Point(18, 105);
+            this.buttonSaveFile.Name = "buttonSaveFile";
+            this.buttonSaveFile.Size = new System.Drawing.Size(106, 60);
+            this.buttonSaveFile.TabIndex = 0;
+            this.toolTipSaveFile.SetToolTip(this.buttonSaveFile, "Сохранить файл");
+            this.buttonSaveFile.UseVisualStyleBackColor = false;
+            this.buttonSaveFile.Click += new System.EventHandler(this.buttonSaveFile_Click);
             // 
-            // buttonSearch
+            // panelDataGridView
             // 
-            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSearch.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.zoom;
-            this.buttonSearch.Location = new System.Drawing.Point(6, 245);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(80, 50);
-            this.buttonSearch.TabIndex = 2;
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonSort
-            // 
-            this.buttonSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSort.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonSort.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_sort;
-            this.buttonSort.Location = new System.Drawing.Point(106, 163);
-            this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(80, 47);
-            this.buttonSort.TabIndex = 2;
-            this.buttonSort.UseVisualStyleBackColor = true;
-            this.buttonSort.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ButtonFilter
-            // 
-            this.ButtonFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonFilter.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ButtonFilter.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.table_edit;
-            this.ButtonFilter.Location = new System.Drawing.Point(6, 163);
-            this.ButtonFilter.Name = "ButtonFilter";
-            this.ButtonFilter.Size = new System.Drawing.Size(80, 50);
-            this.ButtonFilter.TabIndex = 2;
-            this.ButtonFilter.UseVisualStyleBackColor = true;
-            this.ButtonFilter.Click += new System.EventHandler(this.ButtonFilter_Click);
-            // 
-            // textBoxSave
-            // 
-            this.textBoxSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxSave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSave.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxSave.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSave.Location = new System.Drawing.Point(119, 232);
-            this.textBoxSave.Multiline = true;
-            this.textBoxSave.Name = "textBoxSave";
-            this.textBoxSave.ReadOnly = true;
-            this.textBoxSave.Size = new System.Drawing.Size(49, 18);
-            this.textBoxSave.TabIndex = 0;
-            this.textBoxSave.Text = "Сохранить";
-            this.textBoxSave.TextChanged += new System.EventHandler(this.textBoxSort_TextChanged);
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSearch.Location = new System.Drawing.Point(29, 233);
-            this.textBoxSearch.Multiline = true;
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.ReadOnly = true;
-            this.textBoxSearch.Size = new System.Drawing.Size(30, 17);
-            this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Text = "Найти";
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSort_TextChanged);
-            // 
-            // textBoxSort
-            // 
-            this.textBoxSort.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxSort.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSort.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxSort.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSort.Location = new System.Drawing.Point(115, 151);
-            this.textBoxSort.Multiline = true;
-            this.textBoxSort.Name = "textBoxSort";
-            this.textBoxSort.ReadOnly = true;
-            this.textBoxSort.Size = new System.Drawing.Size(63, 12);
-            this.textBoxSort.TabIndex = 0;
-            this.textBoxSort.Text = "Сортировать";
-            this.textBoxSort.TextChanged += new System.EventHandler(this.textBoxSort_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(51, 21);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(94, 17);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Открыть файл";
-            // 
-            // textBoxFile
-            // 
-            this.textBoxFile.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFile.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBoxFile.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxFile.Location = new System.Drawing.Point(6, 151);
-            this.textBoxFile.Multiline = true;
-            this.textBoxFile.Name = "textBoxFile";
-            this.textBoxFile.ReadOnly = true;
-            this.textBoxFile.Size = new System.Drawing.Size(94, 12);
-            this.textBoxFile.TabIndex = 0;
-            this.textBoxFile.Text = "Редактировать файл";
-            // 
-            // openFileDialogTask
-            // 
-            this.openFileDialogTask.FileName = "openFileDialogTask";
-            // 
-            // groupBoxDataGrid
-            // 
-            this.groupBoxDataGrid.Controls.Add(this.dataGridViewMain);
-            this.groupBoxDataGrid.Location = new System.Drawing.Point(231, 28);
-            this.groupBoxDataGrid.Name = "groupBoxDataGrid";
-            this.groupBoxDataGrid.Size = new System.Drawing.Size(552, 409);
-            this.groupBoxDataGrid.TabIndex = 1;
-            this.groupBoxDataGrid.TabStop = false;
+            this.panelDataGridView.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelDataGridView.Controls.Add(this.dataGridViewMain);
+            this.panelDataGridView.Location = new System.Drawing.Point(12, 176);
+            this.panelDataGridView.Name = "panelDataGridView";
+            this.panelDataGridView.Size = new System.Drawing.Size(806, 280);
+            this.panelDataGridView.TabIndex = 0;
             // 
             // dataGridViewMain
             // 
+            this.dataGridViewMain.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMain.ColumnHeadersVisible = false;
-            this.dataGridViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewMain.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewMain.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewMain.Name = "dataGridViewMain";
-            this.dataGridViewMain.ReadOnly = true;
-            this.dataGridViewMain.RowHeadersVisible = false;
-            this.dataGridViewMain.Size = new System.Drawing.Size(546, 390);
+            this.dataGridViewMain.Size = new System.Drawing.Size(800, 274);
             this.dataGridViewMain.TabIndex = 0;
-            this.dataGridViewMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellContentClick);
+            this.dataGridViewMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellContentClick_1);
             // 
-            // toolStripMain
+            // panelNoMain
             // 
-            this.toolStripMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabelMain,
-            this.toolStripComboBoxMain});
-            this.toolStripMain.Location = new System.Drawing.Point(0, 0);
-            this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(795, 25);
-            this.toolStripMain.TabIndex = 3;
-            this.toolStripMain.Text = "toolStripMain";
+            this.panelNoMain.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelNoMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelNoMain.Controls.Add(this.buttonSaveFile);
+            this.panelNoMain.Controls.Add(this.buttonHelp);
+            this.panelNoMain.Location = new System.Drawing.Point(827, 69);
+            this.panelNoMain.Name = "panelNoMain";
+            this.panelNoMain.Size = new System.Drawing.Size(145, 387);
+            this.panelNoMain.TabIndex = 1;
             // 
-            // toolStripLabelMain
+            // buttonHelp
             // 
-            this.toolStripLabelMain.Name = "toolStripLabelMain";
-            this.toolStripLabelMain.Size = new System.Drawing.Size(36, 22);
-            this.toolStripLabelMain.Text = "Лист:";
+            this.buttonHelp.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonHelp.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.help;
+            this.buttonHelp.Location = new System.Drawing.Point(18, 15);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(106, 60);
+            this.buttonHelp.TabIndex = 0;
+            this.toolTipHelp.SetToolTip(this.buttonHelp, "Подробная информация");
+            this.buttonHelp.UseVisualStyleBackColor = false;
             // 
-            // toolStripComboBoxMain
+            // buttonEditFile
             // 
-            this.toolStripComboBoxMain.Name = "toolStripComboBoxMain";
-            this.toolStripComboBoxMain.Size = new System.Drawing.Size(121, 25);
-            this.toolStripComboBoxMain.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxMain_SelectedIndexChanged);
+            this.buttonEditFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEditFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditFile.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonEditFile.Image = global::Tyuiu.MusaevRS.Sprint7.Project.V9.Properties.Resources.application_form_edit;
+            this.buttonEditFile.Location = new System.Drawing.Point(659, 15);
+            this.buttonEditFile.Name = "buttonEditFile";
+            this.buttonEditFile.Size = new System.Drawing.Size(106, 60);
+            this.buttonEditFile.TabIndex = 1;
+            this.toolTipEdit.SetToolTip(this.buttonEditFile, "Редактировать файл");
+            this.buttonEditFile.UseVisualStyleBackColor = false;
+            this.buttonEditFile.Click += new System.EventHandler(this.buttonEditFile_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(795, 449);
-            this.Controls.Add(this.toolStripMain);
-            this.Controls.Add(this.groupBoxDataGrid);
-            this.Controls.Add(this.groupBoxMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(984, 502);
+            this.Controls.Add(this.panelNoMain);
+            this.Controls.Add(this.panelDataGridView);
+            this.Controls.Add(this.panelMain);
             this.Name = "FormMain";
-            this.Text = "Sprint 7 | MusaevRS | Project | V9";
-            this.Load += new System.EventHandler(this.FormMain_Load);
-            this.groupBoxMain.ResumeLayout(false);
-            this.groupBoxMain.PerformLayout();
-            this.groupBoxDataGrid.ResumeLayout(false);
+            this.Text = "Tyuiu.MusaevRS.Sprint7.Project.V9";
+            this.Load += new System.EventHandler(this.FormMain_Load_1);
+            this.panelMain.ResumeLayout(false);
+            this.panelDataGridView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
-            this.toolStripMain.ResumeLayout(false);
-            this.toolStripMain.PerformLayout();
+            this.panelNoMain.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBoxMain;
-        private System.Windows.Forms.Button ButtonFilter;
-        private System.Windows.Forms.TextBox textBoxFile;
-        private System.Windows.Forms.TextBox textBoxSort;
-        private System.Windows.Forms.Button buttonSort;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.TextBox textBoxSave;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button buttonOpenFile;
-        private System.Windows.Forms.OpenFileDialog openFileDialogTask;
-        private System.Windows.Forms.GroupBox groupBoxDataGrid;
+        private System.Windows.Forms.Panel panelDataGridView;
         public System.Windows.Forms.DataGridView dataGridViewMain;
-        private System.Windows.Forms.ToolStrip toolStripMain;
-        private System.Windows.Forms.ToolStripLabel toolStripLabelMain;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxMain;
+        private System.Windows.Forms.ToolTip toolTipOpenFile;
+        private System.Windows.Forms.Panel panelNoMain;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonSaveFile;
+        private System.Windows.Forms.ToolTip toolTipHelp;
+        private System.Windows.Forms.ToolTip toolTipSaveFile;
+        private System.Windows.Forms.ToolTip toolTipEdit;
+        private System.Windows.Forms.Button buttonEditFile;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogOpen;
     }
 }
 
