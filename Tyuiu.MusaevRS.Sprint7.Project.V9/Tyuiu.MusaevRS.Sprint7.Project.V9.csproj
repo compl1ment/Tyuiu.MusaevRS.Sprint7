@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditTable.resx">
       <DependentUpon>FormEditTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +119,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\application_form_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mishka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize-image-online.com_1701928794_mishkajpg_Fjwr0g43.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

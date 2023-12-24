@@ -15,11 +15,13 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
     public partial class FormMain : MaterialForm
     {
-        public static string fileName;
-        
-        public static string[,] LoadFromFileData(string fileName)
+        public string fileName;
+        public string fileNameEditTable;
+
+
+        public string[,] LoadFromFileData(string fileName)
         {
-            string fileData = File.ReadAllText(fileName);
+            string fileData = File.ReadAllText(fileName);           
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
             int rows = lines.Length;
@@ -40,12 +42,17 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         public FormMain()
         {
             InitializeComponent();
-            
+            dataGridViewMain.ReadOnly = true;
+            buttonEditFile.Enabled = false;
+            textBoxEditFile.Visible = false;
+            textBoxEditFile.Text = "Редактирование отключено";
+
 
         }
-        private void LoadDataIntoDataGridView(string fileName)
-        {
 
+        public void LoadDataIntoDataGridView(string fileName)
+        {
+            FormEditTable formEditTable = new FormEditTable();
             string[,] dataArray = LoadFromFileData(fileName);
 
 
@@ -56,6 +63,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             for (int i = 0; i < dataArray.GetLength(1); i++)
             {
                 dataGridViewMain.Columns.Add("", dataArray[0, i]);
+                
             }
 
 
@@ -67,10 +75,17 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
                     rowData.Add(dataArray[i, j]);
                 }
                 dataGridViewMain.Rows.Add(rowData.ToArray());
+                
             }
-        }                                
+          
+        }
+
+
+
+
 
         
+
         private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -81,7 +96,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         }
 
-        private void buttonOpenFile_Click_1(object sender, EventArgs e)
+        public void buttonOpenFile_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialogTask = new OpenFileDialog();
             openFileDialogTask.Filter = "csv Files|*.csv";
@@ -90,6 +105,8 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             {
                 string fileName = openFileDialogTask.FileName;
                 LoadDataIntoDataGridView(fileName);
+                buttonEditFile.Enabled = true;
+                textBoxEditFile.Visible = true;
             }
 
         }
@@ -105,6 +122,36 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             {
                 File.Delete(filePathSavedFile);
             }
+            int rows = dataGridViewMain.RowCount;
+            int columns = dataGridViewMain.ColumnCount;
+
+            string str = "Название;Номер;Адрес;Телефон магазина;Фио поставщика;Телефон поставщика;Стоимость поставки\n";
+            for (int i = 0; i < rows - 1; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j != columns - 1)
+                    {
+                        str = str + dataGridViewMain.Rows[i].Cells[j].Value + ";";
+                    }
+                    else
+                    {
+                        str = str + dataGridViewMain.Rows[i].Cells[j].Value;
+                    }
+                }
+                File.AppendAllText(filePathSavedFile, str + Environment.NewLine, Encoding.Default);
+                str = "";
+            }
+
+            DialogResult dialogres = MessageBox.Show("Файл " + filePathSavedFile + " сохранен успешно!\nОткрыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (dialogres == DialogResult.Yes)
+            {
+                System.Diagnostics.Process txt = new System.Diagnostics.Process();
+                txt.StartInfo.FileName = "notepad.exe";
+                txt.StartInfo.Arguments = filePathSavedFile;
+                txt.Start();
+            }
         }
 
         private void dataGridViewMain_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -114,8 +161,16 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         private void buttonEditFile_Click(object sender, EventArgs e)
         {
-            FormEditTable formEditTable = new FormEditTable();
-            formEditTable.Show();
+            dataGridViewMain.ReadOnly = false;
+            textBoxEditFile.Text = "Редактирование включено";
+
+
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            FormAbout frmb = new FormAbout();
+            frmb.Show();
         }
     }
 

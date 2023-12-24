@@ -117,32 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="table_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\table_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application_form_add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_form_add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mishka" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mishka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application_form_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_form_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="misha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\misha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application_put" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_put.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application_form_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application_form_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="resize-image-online.com_1701928794_mishkajpg_Fjwr0g43" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\resize-image-online.com_1701928794_mishkajpg_Fjwr0g43.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="textBoxAbout.Text" xml:space="preserve">
+    <value>Разработчик: Мусаев Р.Ш.
+группа ПКТБ 23-2
+
+Программа разработана в рамках изучения языка C#
+
+Тюменский индустриальный университет 2023
+Высшая школа цифровых технологий 2023
+
+Название проекта: Tyuiu.MusaevRS.Sprint7.Project.V9</value>
   </data>
 </root>
