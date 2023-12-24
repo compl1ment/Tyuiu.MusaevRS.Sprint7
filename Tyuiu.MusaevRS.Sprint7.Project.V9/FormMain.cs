@@ -127,7 +127,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             int rows = dataGridViewMain.RowCount;
             int columns = dataGridViewMain.ColumnCount;
 
-            string str = "Название;Номер;Адрес;Телефон магазина;Фио поставщика;Телефон поставщика;Стоимость поставки\n";
+            string str = "";
             for (int i = 0; i < rows - 1; i++)
             {
                 for (int j = 0; j < columns; j++)
