@@ -21,7 +21,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         public string[,] LoadFromFileData(string fileName)
         {
-            string fileData = File.ReadAllText(fileName);           
+            string fileData = File.ReadAllText(fileName);
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
             int rows = lines.Length;
@@ -63,7 +63,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             for (int i = 0; i < dataArray.GetLength(1); i++)
             {
                 dataGridViewMain.Columns.Add("", dataArray[0, i]);
-                
+
             }
 
 
@@ -75,16 +75,16 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
                     rowData.Add(dataArray[i, j]);
                 }
                 dataGridViewMain.Rows.Add(rowData.ToArray());
-                
+
             }
-          
+
         }
 
 
 
 
 
-        
+
 
         private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -172,6 +172,30 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             FormAbout frmb = new FormAbout();
             frmb.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string valueSearchInGridView = textBoxSearch.Text.ToLower();
+
+            foreach (DataGridViewRow row in dataGridViewMain.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                bool found = false;
+
+                for (int j = 0; j < dataGridViewMain.Columns.Count; j++)
+                {
+                    if (row.Cells[j].Value != null && row.Cells[j].Value.ToString().ToLower().Contains(valueSearchInGridView))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.Visible = found;
+            }
+        }
+        
     }
 
 

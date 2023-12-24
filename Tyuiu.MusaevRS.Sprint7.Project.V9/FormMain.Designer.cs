@@ -31,6 +31,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         {
             this.components = new System.ComponentModel.Container();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.textBoxEditFile = new System.Windows.Forms.TextBox();
             this.buttonEditFile = new System.Windows.Forms.Button();
             this.buttonOpenFile = new System.Windows.Forms.Button();
             this.panelDataGridView = new System.Windows.Forms.Panel();
@@ -43,17 +44,20 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.toolTipSaveFile = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipEdit = new System.Windows.Forms.ToolTip(this.components);
             this.saveFileDialogOpen = new System.Windows.Forms.SaveFileDialog();
-            this.textBoxEditFile = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panelMain.SuspendLayout();
             this.panelDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.panelNoMain.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelMain.Controls.Add(this.groupBox1);
             this.panelMain.Controls.Add(this.textBoxEditFile);
             this.panelMain.Controls.Add(this.buttonEditFile);
             this.panelMain.Controls.Add(this.buttonOpenFile);
@@ -61,6 +65,18 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(806, 101);
             this.panelMain.TabIndex = 0;
+            // 
+            // textBoxEditFile
+            // 
+            this.textBoxEditFile.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxEditFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEditFile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEditFile.Location = new System.Drawing.Point(558, 25);
+            this.textBoxEditFile.Multiline = true;
+            this.textBoxEditFile.Name = "textBoxEditFile";
+            this.textBoxEditFile.ReadOnly = true;
+            this.textBoxEditFile.Size = new System.Drawing.Size(95, 41);
+            this.textBoxEditFile.TabIndex = 2;
             // 
             // buttonEditFile
             // 
@@ -107,6 +123,7 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMain.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewMain.Name = "dataGridViewMain";
+            this.dataGridViewMain.RowHeadersVisible = false;
             this.dataGridViewMain.Size = new System.Drawing.Size(800, 274);
             this.dataGridViewMain.TabIndex = 0;
             this.dataGridViewMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMain_CellContentClick_1);
@@ -152,17 +169,23 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.buttonHelp.UseVisualStyleBackColor = false;
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
-            // textBoxEditFile
+            // groupBox1
             // 
-            this.textBoxEditFile.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxEditFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxEditFile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxEditFile.Location = new System.Drawing.Point(558, 25);
-            this.textBoxEditFile.Multiline = true;
-            this.textBoxEditFile.Name = "textBoxEditFile";
-            this.textBoxEditFile.ReadOnly = true;
-            this.textBoxEditFile.Size = new System.Drawing.Size(95, 41);
-            this.textBoxEditFile.TabIndex = 2;
+            this.groupBox1.Controls.Add(this.textBoxSearch);
+            this.groupBox1.Location = new System.Drawing.Point(177, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(161, 57);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Поиск";
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FormMain
             // 
@@ -178,6 +201,8 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.panelDataGridView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
             this.panelNoMain.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,6 +223,8 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
         private System.Windows.Forms.Button buttonEditFile;
         private System.Windows.Forms.SaveFileDialog saveFileDialogOpen;
         private System.Windows.Forms.TextBox textBoxEditFile;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }
 
