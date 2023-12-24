@@ -113,6 +113,8 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         private void buttonSaveFile_Click(object sender, EventArgs e)
         {
+            DialogResult res = DialogResult;
+            
             saveFileDialogOpen.FileName = "OutPutFile.csv";
             saveFileDialogOpen.ShowDialog();
             string filePathSavedFile = saveFileDialogOpen.FileName;
@@ -143,15 +145,9 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
                 str = "";
             }
 
-            DialogResult dialogres = MessageBox.Show("Файл " + filePathSavedFile + " сохранен успешно!\nОткрыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (dialogres == DialogResult.Yes)
-            {
-                System.Diagnostics.Process txt = new System.Diagnostics.Process();
-                txt.StartInfo.FileName = "notepad.exe";
-                txt.StartInfo.Arguments = filePathSavedFile;
-                txt.Start();
-            }
+            
+            DialogResult dialogres = MessageBox.Show("Файл " + filePathSavedFile + " сохранен!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void dataGridViewMain_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -161,8 +157,19 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
 
         private void buttonEditFile_Click(object sender, EventArgs e)
         {
-            dataGridViewMain.ReadOnly = false;
-            textBoxEditFile.Text = "Редактирование включено";
+            if (dataGridViewMain.ReadOnly)
+            {
+                dataGridViewMain.ReadOnly = false;
+                textBoxEditFile.Text = "Редактирование включено";
+
+            }
+            else
+            {
+                dataGridViewMain.ReadOnly = true;
+                textBoxEditFile.Text = "Редактирование выключено";
+            }
+            
+            
 
 
         }

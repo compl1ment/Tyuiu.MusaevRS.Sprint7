@@ -71,11 +71,11 @@ namespace Tyuiu.MusaevRS.Sprint7.Project.V9
             this.textBoxEditFile.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBoxEditFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEditFile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxEditFile.Location = new System.Drawing.Point(558, 25);
+            this.textBoxEditFile.Location = new System.Drawing.Point(634, 76);
             this.textBoxEditFile.Multiline = true;
             this.textBoxEditFile.Name = "textBoxEditFile";
             this.textBoxEditFile.ReadOnly = true;
-            this.textBoxEditFile.Size = new System.Drawing.Size(95, 41);
+            this.textBoxEditFile.Size = new System.Drawing.Size(165, 18);
             this.textBoxEditFile.TabIndex = 2;
             // 
             // buttonEditFile
